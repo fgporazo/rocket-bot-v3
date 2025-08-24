@@ -26,7 +26,7 @@ class CommandButton(Button):
         # Special case: DM Rocket Bot
         if self.command.lower() == "dm_bot":
             try:
-                await interaction.user.send("🚀 The Rocket Bot says hi! Here’s your DM interface.")
+                await interaction.user.send("🚀 The Rocket Bot says hi! Use **tr feedback <message>**.")
                 await interaction.response.send_message("✅ Check your DMs!", ephemeral=True)
             except discord.Forbidden:
                 await interaction.response.send_message("❌ I couldn't DM you. Please enable DMs.", ephemeral=True)
